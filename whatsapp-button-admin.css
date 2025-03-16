@@ -1,0 +1,61 @@
+/* Estilos generales del panel del plugin */
+.wrap h1 {
+  font-size: 24px;
+  color: black;
+  font-weight: bold;
+  gap: 10px;
+  text-align: center;
+}
+
+/* Icono al lado del título */
+.wrap h1::after {
+  content: "\f232";
+  font-family: "Font Awesome 5 Brands";
+  font-size: 30px;
+  color: #25d366;
+  margin-left: 10px;
+}
+
+/* Estilos para el formulario y la table */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table.form-table {
+  width: 800px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 4px 5px 11px -1px rgba(168, 168, 168, 0.75);
+}
+
+.form-table th {
+  padding: 30px 15px;
+}
+/* Inputs personalizados */
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Botón guardar*/
+input#submit {
+  background-color: #25d366 !important;
+  color: white !important;
+  padding: 12px 25px !important;
+  border: none !important;
+  border-radius: 5px !important;
+  font-size: 16px !important;
+  cursor: pointer !important;
+  transition: background 0.3s ease-in-out;
+  box-shadow: none !important;
+}
+
+input#submit:hover {
+  background-color: #1eb050 !important;
+}
