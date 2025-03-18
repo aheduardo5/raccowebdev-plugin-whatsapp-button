@@ -47,9 +47,13 @@ function whatsapp_button_display(){
   $numero= get_option('whatsapp_button_number','');
   $mensaje = get_option('whatsapp_button_message','Hola!, Me gustaria saber mas sobre sus servicios.');
 
-
-  echo '
-    <div id="whatsapp_button">
+  // Obtener animaciones desde la configuracion
+  $animation_load = get_option('whatsapp_button_animation_load', 'animate__fadeIn');
+  $animation_hover = get_option('whatsapp_button_animation_hover', 'animate__pulse');
+    echo '
+    <div id="whatsapp_button" class="animate__animated ' . esc_attr($animation_load) . '"
+      data-animation-load="' . esc_attr($animation_load) . '"
+      data-animation-hover="' . esc_attr($animation_hover) . '">
       <a href="https://wa.me/' . esc_attr($numero) . '?text=' . urlencode($mensaje) . '" target="_blank" class="whatsapp_link">
         <i class="fa-brands fa-whatsapp"></i>
       </a>
@@ -62,6 +66,8 @@ function whatsapp_button_enqueue_scripts(){
   // Obtener la URL del plugin
   $plugin_url = plugin_dir_url(__FILE__);
 
+  // Cargar animation.style
+  wp_enqueue_style('animation_style', 'https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css', array(), null);
   // Enqueue CSS del plugin
   wp_enqueue_style('whatsapp_button_css', $plugin_url . 'whatsapp-button.css', array(), '1.0', 'all');
   // Enqueue FontAwesome (CDN)
@@ -101,11 +107,16 @@ function whatsapp_button_admin_page(){
 }
 
 function whatsapp_button_register_settings(){
+  // Registrar opciones
   register_setting('whatsapp_button_settings_group', 'whatsapp_button_number');
   register_setting('whatsapp_button_settings_group', 'whatsapp_button_message');
   register_setting('whatsapp_button_settings_group', 'whatsapp_button_enabled');
   register_setting('whatsapp_button_settings_group','whatsapp_button_size');
   register_setting('whatsapp_button_settings_group','whatsapp_icon_size');
+
+  // Animaciones
+  register_setting('whatsapp_button_settings_group', 'whatsapp_button_animation_load');
+  register_setting('whatsapp_button_settings_group', 'whatsapp_button_animation_hover');
 
   add_settings_section(
     'whatsapp_button_main_section',
@@ -153,6 +164,23 @@ function whatsapp_button_register_settings(){
     'whatsapp_button',
     'whatsapp_button_main_section'
   );
+
+  // Agregar seccion de animaciones
+  add_settings_field(
+    'whatsapp_button_animation_load',
+    'Animacion al cargar',
+    'whatsapp_button_animation_load_callback',
+    'whatsapp_button',
+    'whatsapp_button_main_section'
+  );
+
+  add_settings_field(
+    'whatsapp_button_animation_hover',
+    'Animación al pasar el mouse',
+    'whatsapp_button_animation_hover_callback',
+    'whatsapp_button',
+    'whatsapp_button_main_section'
+);
 }
 add_action('admin_init', 'whatsapp_button_register_settings');
 
@@ -177,6 +205,14 @@ function whatsapp_button_admin_styles($hook) {
       return;
   }
 
+  wp_enqueue_script(
+    'whatsapp_button_admin_js',
+    plugin_dir_url(__FILE__) . 'whatsapp-button-admin.js',
+    array('jquery'),
+    null,
+    true
+  );
+
   wp_enqueue_style(
       'whatsapp_button_admin_css',
       plugin_dir_url(__FILE__) . 'whatsapp-button-admin.css',
@@ -185,6 +221,8 @@ function whatsapp_button_admin_styles($hook) {
       'all'
   );
   wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css', array(), null);
+
+  wp_enqueue_style('animate-css', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
 }
 add_action('admin_enqueue_scripts', 'whatsapp_button_admin_styles');
 
@@ -222,4 +260,35 @@ function whatsapp_button_size_callback() {
 function whatsapp_icon_size_callback() {
   $icon_size = get_option('whatsapp_icon_size', '50');
   echo '<input type="number" name="whatsapp_icon_size" value="' . esc_attr($icon_size) . '" min="30" max="100">';
+}
+
+// Callback para la animacion al cargar
+function whatsapp_button_animation_load_callback(){
+  $animation_load = get_option('whatsapp_button_animation_load', 'animate__fadeIn');
+  ?>
+  <select id="whatsapp_button_animation_load" name="whatsapp_button_animation_load">
+      <option value="animate__fadeIn" <?php selected($animation_load, 'animate__fadeIn'); ?>>Fade In</option>
+      <option value="animate__slideInUp" <?php selected($animation_load, 'animate__slideInUp'); ?>>Slide In Up</option>
+      <option value="animate__zoomIn" <?php selected($animation_load, 'animate__zoomIn'); ?>>Zoom In</option>
+      <option value="animate__bounceIn" <?php selected($animation_load, 'animate__bounceIn'); ?>>Bounce In</option>
+  </select>
+
+  <button type="button" id="preview_load_animation" class="button">Previsualizar</button>
+  <div id="animation_preview_load" class="preview_box"><i class="fa-brands fa-whatsapp"></i></div>
+  <?php
+}
+
+function whatsapp_button_animation_hover_callback(){
+  $animation_hover = get_option('whatsapp_button_animation_hover', 'animate__pulse');
+  ?>
+  <select id="whatsapp_button_animation_hover" name="whatsapp_button_animation_hover">
+      <option value="animate__pulse" <?php selected($animation_hover, 'animate__pulse'); ?>>Pulse</option>
+      <option value="animate__shakeX" <?php selected($animation_hover, 'animate__shakeX'); ?>>Shake</option>
+      <option value="animate__rubberBand" <?php selected($animation_hover, 'animate__rubberBand'); ?>>Rubber Band</option>
+      <option value="animate__tada" <?php selected($animation_hover, 'animate__tada'); ?>>Tada</option>
+  </select>
+
+  <button type="button" id="preview_hover_animation" class="button">Previsualizar</button>
+  <div id="animation_preview_hover" class="preview_box"><i class="fa-brands fa-whatsapp"></i></div>
+  <?php
 }
