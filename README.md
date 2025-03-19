@@ -38,6 +38,7 @@ Puedes cambiar el tamaño del botón y del icono desde el panel de administraci�
 - [x] Agregar animaciones personalizables.
       -- [ ] Implementar accordion para el tema de previzualizacion.
       -- [ ] Implementacion de bootstrap para la pantalla del Admin.
+      -- [ ] Contemplar que los fields de medidas tambien tengan la opcion de previzualizacion.
 - [ ] Permitir elegir la posición del botón en pantalla.
 - [ ] Integrar más opciones de personalización para colores y diseño.
 - [ ] Compatibilidad con Google Analytics para rastrear clics.
