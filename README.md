@@ -35,11 +35,15 @@ Puedes cambiar el tamaño del botón y del icono desde el panel de administraci�
 
 ## 🛠️ TODO (Mejoras Futuras)
 
-- [ ] Agregar animaciones personalizables.
+- [x] Agregar animaciones personalizables.
+      -- [ ] Implementar accordion para el tema de previzualizacion.
+      -- [ ] Implementacion de bootstrap para la pantalla del Admin.
 - [ ] Permitir elegir la posición del botón en pantalla.
 - [ ] Integrar más opciones de personalización para colores y diseño.
 - [ ] Compatibilidad con Google Analytics para rastrear clics.
 - [ ] Implementar soporte para múltiples botones de WhatsApp.
+- [ ] Implementar feature premium popup en boton de whatsapp con mensaje personalizable.
+      -- [ ] Editar imagen de whatsapp en el popup para poner la de tu empleo.
 
 ---
 
