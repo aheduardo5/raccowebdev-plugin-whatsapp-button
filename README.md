@@ -45,6 +45,7 @@ Puedes cambiar el tamaño del botón y del icono desde el panel de administraci�
 - [ ] Implementar soporte para múltiples botones de WhatsApp.
 - [ ] Implementar feature premium popup en boton de whatsapp con mensaje personalizable.
       -- [ ] Editar imagen de whatsapp en el popup para poner la de tu empleo.
+- [ ] Crear seccion premium
 
 ---
 
