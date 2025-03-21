@@ -120,7 +120,7 @@ function whatsapp_button_register_settings(){
 
   add_settings_section(
     'whatsapp_button_main_section',
-    'Opciones del botón',
+    '',
     null,
     'whatsapp_button'
   );
@@ -223,6 +223,22 @@ function whatsapp_button_admin_styles($hook) {
   wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css', array(), null);
 
   wp_enqueue_style('animate-css', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+  // agregar bootstrap
+  wp_enqueue_style(
+    'bootstrap_admin_plugin',
+    'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css',
+    array(),
+    '5.3.2',
+    'all'
+  );
+  wp_enqueue_script(
+    'bootstrap_admin_plugin',
+    'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js',
+    array(),
+    '5.3.2',
+    true
+  );
 }
 add_action('admin_enqueue_scripts', 'whatsapp_button_admin_styles');
 
