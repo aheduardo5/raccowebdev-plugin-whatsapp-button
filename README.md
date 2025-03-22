@@ -57,6 +57,12 @@ Además, desde la versión 1.1.0 se integró:
 - [ ] Agregar más efectos de animación.
 - [ ] Mostrar advertencia visual si se exceden los límites de tamaño en tiempo real.
 - [ ] Agregar opciones de alineación para el botón flotante.
+- [ ] Aplicar una animación por defecto si el usuario no selecciona ninguna.
+- [ ] Añadir previsualización en hover directo sin botón (sólo pasar el mouse).
+- [ ] Agrupar animaciones por categoría: básicas vs. avanzadas (para futura versión premium).
+- [ ] Mostrar notificación tipo Toast cuando se guarden los cambios.
+- [ ] Validar visualmente con color de borde o tooltip si el input numérico excede los límites.
+- [ ] Incluir más animaciones con demostración visual (scroll reveal, flip, etc.).
 
 ---
 
