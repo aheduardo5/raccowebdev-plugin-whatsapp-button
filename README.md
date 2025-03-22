@@ -28,6 +28,13 @@ wp-content/plugins/whatsapp-button/
 ## 🎨 Personalización
 
 Puedes cambiar el tamaño del botón y del icono desde el panel de administración.
+Además, desde la versión 1.1.0 se integró:
+
+✅ Vista previa en tiempo real para el tamaño del botón e ícono.
+✅ Animaciones personalizables tanto al cargar como al hacer hover.
+✅ Vista previa de animaciones directamente en el panel de administración.
+✅ Validaciones para mantener los tamaños dentro de límites accesibles.
+✅ Ajustes responsivos para el panel de configuración.
 
 ⚡ Próximamente se agregarán más opciones, como animaciones, cambio de posición y múltiples botones.
 
@@ -35,11 +42,27 @@ Puedes cambiar el tamaño del botón y del icono desde el panel de administraci�
 
 ## 🛠️ TODO (Mejoras Futuras)
 
-- [ ] Agregar animaciones personalizables.
+- [x] Agregar animaciones personalizables.
+      -- [x] Implementar accordion para el tema de previzualizacion.
+      -- [x] Implementacion de bootstrap para la pantalla del Admin.
+      -- [x] Contemplar que los fields de medidas tambien tengan la opcion de previzualizacion.
 - [ ] Permitir elegir la posición del botón en pantalla.
 - [ ] Integrar más opciones de personalización para colores y diseño.
 - [ ] Compatibilidad con Google Analytics para rastrear clics.
 - [ ] Implementar soporte para múltiples botones de WhatsApp.
+- [ ] Implementar feature premium popup en boton de whatsapp con mensaje personalizable.
+      -- [ ] Editar imagen de whatsapp en el popup para poner la de tu negocio.
+- [ ] Crear seccion premium
+- [ ] Mejorar layout responsive en pantallas pequeñas.
+- [ ] Agregar más efectos de animación.
+- [ ] Mostrar advertencia visual si se exceden los límites de tamaño en tiempo real.
+- [ ] Agregar opciones de alineación para el botón flotante.
+- [ ] Aplicar una animación por defecto si el usuario no selecciona ninguna.
+- [ ] Añadir previsualización en hover directo sin botón (sólo pasar el mouse).
+- [ ] Agrupar animaciones por categoría: básicas vs. avanzadas (para futura versión premium).
+- [ ] Mostrar notificación tipo Toast cuando se guarden los cambios.
+- [ ] Validar visualmente con color de borde o tooltip si el input numérico excede los límites.
+- [ ] Incluir más animaciones con demostración visual (scroll reveal, flip, etc.).
 
 ---
 

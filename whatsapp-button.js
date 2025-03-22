@@ -1,24 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
-  setTimeout(function () {
-    let whatsappButton = document.getElementById("whatsapp_button");
-    if (whatsappButton) {
-      whatsappButton.style.opacity = "1";
-      whatsappButton.style.transform = "translateY(0)";
-    }
-  }, 2000);
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  let saveButton = document.querySelector(
-    "#whatsapp-button-admin .button-primary"
+  const whatsappButton = document.querySelector("#whatsapp_button");
+  const whatsappLink = document.querySelector(
+    "#whatsapp_button .whatsapp_link"
   );
-  if (saveButton) {
-    saveButton.style.backgroundColor = "#25d366";
-    saveButton.style.color = "white";
-    saveButton.style.padding = "12px 25px";
-    saveButton.style.border = "none";
-    saveButton.style.borderRadius = "5px";
-    saveButton.style.fontSize = "16px";
-    saveButton.style.cursor = "pointer";
-  }
+
+  if (!whatsappButton || !whatsappLink) return;
+
+  // Obtener las animaciones desde los atributos del elemento (cargadas desde PHP)
+  const animationLoad =
+    whatsappButton.dataset.animationLoad || "animate__fadeIn";
+  const animationHover =
+    whatsappButton.dataset.animationHover || "animate__pulse";
+
+  // Aplicar la animación de carga
+  whatsappButton.classList.add("animate__animated", animationLoad);
+
+  // Aplicar la animación de hover solo cuando el usuario pase el mouse
+  whatsappLink.addEventListener("mouseenter", function () {
+    whatsappLink.classList.add("animate__animated", animationHover);
+  });
+
+  whatsappLink.addEventListener("mouseleave", function () {
+    whatsappLink.classList.remove("animate__animated", animationHover);
+  });
 });
