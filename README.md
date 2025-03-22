@@ -38,6 +38,18 @@ Además, desde la versión 1.1.0 se integró:
 
 ⚡ Próximamente se agregarán más opciones, como animaciones, cambio de posición y múltiples botones.
 
+### 🆕 Personalización avanzada (desde v1.2.0)
+
+Esta versión incluye una mejora significativa en la experiencia de usuario y personalización del botón de WhatsApp:
+
+✅ Panel de configuración modularizado y mejor estructurado.
+✅ Uso de Bootstrap para una UI más limpia y responsive.
+✅ Sistema de previsualización instantánea de animaciones y tamaños.
+✅ Separación entre animación de carga y animación en hover.
+✅ Valores personalizados con validación visual (mínimos y máximos).
+✅ Estilos encapsulados para evitar conflictos con otros plugins.
+✅ Estructura de archivos organizada por responsabilidades (admin, frontend, estilos, scripts).
+
 ---
 
 ## 🛠️ TODO (Mejoras Futuras)
