@@ -23,9 +23,11 @@
   color: white;
   display: grid;
   height: 80px;
+  height: var(--whatsapp-button-size, 80px);
   place-items: center;
   text-decoration: none;
   width: 80px;
+  width: var(--whatsapp-button-size, 80px);
 }
 
 #whatsapp_button .whatsapp_link i {
