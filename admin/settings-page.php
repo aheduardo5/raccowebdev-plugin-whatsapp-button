@@ -15,17 +15,31 @@
  * @package RaccoWebDev_WhatsApp_Button
  */
 
-function whatsapp_button_admin_page(){
+function whatsapp_button_admin_page()
+{
   ?>
-  <div class="wrap racco-styles">
-    <h1 class="text-center">Configuracion del boton de Whatsapp</h1>
-    <form method="post" action="options.php">
-      <?php
-        settings_fields('whatsapp_button_settings_group');
-        do_settings_sections('whatsapp_button');
-        submit_button();
-      ?>
-    </form>
+  <div class="tab-content">
+    <div class="tab-pane fade show active" id="config" role="tabpanel">
+      <div class="wrap racco-styles">
+        <div class="container py-4">
+          <h1 class="text-center mb-4">Configuración del botón de WhatsApp</h1>
+          <form method="post" action="options.php">
+            <?php
+            settings_fields('whatsapp_button_settings_group');
+            do_settings_sections('whatsapp_button');
+            ?>
+            <hr class="my-4">
+            <?php
+            settings_fields('whatsapp_button_settings_group');
+            do_settings_sections('whatsapp_button_clickid');
+            submit_button();
+            ?>
+          </form>
+        </div>
+      </div>
+    </div>
+
   </div>
+
   <?php
 }

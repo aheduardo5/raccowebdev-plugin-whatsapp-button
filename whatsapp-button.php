@@ -9,8 +9,8 @@ License: GPL2
 */
 
 // Evita el acceso directo
-if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+if (!defined('ABSPATH')) {
+  exit;
 }
 
 require_once plugin_dir_path(__FILE__) . 'admin/settings-page.php';
@@ -24,7 +24,8 @@ require_once plugin_dir_path(__FILE__) . 'includes/enqueue.php';
 
 
 // Agregar opciones en el panel de administracion
-function whatsapp_button_admin_menu(){
+function whatsapp_button_admin_menu()
+{
   add_menu_page(
     'Configuración Whatsapp',
     'Whatsapp Button',

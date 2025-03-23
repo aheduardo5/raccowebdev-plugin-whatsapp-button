@@ -14,11 +14,12 @@
  * @package RaccoWebDev_WhatsApp_Button
  */
 
-function whatsapp_button_admin_styles($hook) {
+function whatsapp_button_admin_styles($hook)
+{
   $plugin_url = plugin_dir_url(dirname(__FILE__));
   // Verifica si estamos en la página del plugin
   if ($hook != 'toplevel_page_whatsapp_button') {
-      return;
+    return;
   }
 
   wp_enqueue_script(
@@ -30,11 +31,11 @@ function whatsapp_button_admin_styles($hook) {
   );
 
   wp_enqueue_style(
-      'whatsapp_button_admin_css',
-      $plugin_url . 'assets/css/whatsapp-button-admin.css',
-      array(),
-      '1.0',
-      'all'
+    'whatsapp_button_admin_css',
+    $plugin_url . 'assets/css/whatsapp-button-admin.css',
+    array(),
+    '1.0',
+    'all'
   );
   wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css', array(), null);
 
