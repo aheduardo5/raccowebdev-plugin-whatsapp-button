@@ -10,7 +10,8 @@
  */
 
 // Enqueue de los estilos y scripts
-function whatsapp_button_enqueue_scripts(){
+function whatsapp_button_enqueue_scripts()
+{
   // Obtener la URL del plugin
   $plugin_url = plugin_dir_url(dirname(__FILE__));
 

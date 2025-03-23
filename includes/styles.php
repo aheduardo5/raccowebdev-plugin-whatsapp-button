@@ -10,7 +10,8 @@
  * @package RaccoWebDev_WhatsApp_Button
  */
 
- function whatsapp_button_custom_styles(){
+function whatsapp_button_custom_styles()
+{
   $button_size = get_option('whatsapp_button_size', '80');
   $icon_size = get_option('whatsapp_icon_size', '50');
 
