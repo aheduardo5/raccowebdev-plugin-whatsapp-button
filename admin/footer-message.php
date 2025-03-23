@@ -11,11 +11,12 @@
  */
 
 // Mensaje personalizado en el footer de la pagina.
-function whatsapp_button_custom_admin_footer(){
+function whatsapp_button_custom_admin_footer()
+{
   $screen = get_current_screen();
 
   // Verificar si estamos en la pagina del plugin
-  if( $screen->id === 'toplevel_page_whatsapp_button'){
+  if ($screen->id === 'toplevel_page_whatsapp_button') {
     return 'Gracias por usar <strong>Whatsapp Button</strong>. ¿Necesitas más plugins personalizados? <a href="https://www.raccowebdev.com" target="_blank">Visítanos en Raccowebdev</a>.';
   }
 }

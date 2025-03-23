@@ -54,11 +54,13 @@ Esta versión incluye una mejora significativa en la experiencia de usuario y pe
 
 ## 🛠️ TODO (Mejoras Futuras)
 
+### 🎨 Personalización y UX
+
 - [x] Agregar animaciones personalizables.
       -- [x] Implementar accordion para el tema de previzualizacion.
       -- [x] Implementacion de bootstrap para la pantalla del Admin.
       -- [x] Contemplar que los fields de medidas tambien tengan la opcion de previzualizacion.
-- [ ] Permitir elegir la posición del botón en pantalla.
+- [x] Permitir elegir la posición del botón en pantalla.
 - [ ] Integrar más opciones de personalización para colores y diseño.
 - [ ] Compatibilidad con Google Analytics para rastrear clics.
 - [ ] Implementar soporte para múltiples botones de WhatsApp.
@@ -67,14 +69,33 @@ Esta versión incluye una mejora significativa en la experiencia de usuario y pe
 - [ ] Crear seccion premium
 - [ ] Mejorar layout responsive en pantallas pequeñas.
 - [ ] Agregar más efectos de animación.
-- [ ] Mostrar advertencia visual si se exceden los límites de tamaño en tiempo real.
-- [ ] Agregar opciones de alineación para el botón flotante.
 - [ ] Aplicar una animación por defecto si el usuario no selecciona ninguna.
-- [ ] Añadir previsualización en hover directo sin botón (sólo pasar el mouse).
 - [ ] Agrupar animaciones por categoría: básicas vs. avanzadas (para futura versión premium).
-- [ ] Mostrar notificación tipo Toast cuando se guarden los cambios.
+- [ ] Mostrar advertencia visual si se exceden los límites de tamaño en tiempo real.
 - [ ] Validar visualmente con color de borde o tooltip si el input numérico excede los límites.
 - [ ] Incluir más animaciones con demostración visual (scroll reveal, flip, etc.).
+
+### 🧩 Funcionalidades del botón
+
+- [ ] Permitir elegir la posición del botón en pantalla.
+- [ ] Agregar opciones de alineación para el botón flotante.
+- [ ] Integrar más opciones de personalización para colores y diseño.
+- [ ] Implementar soporte para múltiples botones de WhatsApp.
+- [ ] Compatibilidad con Google Analytics para rastrear clics.
+- [ ] Añadir dropdown para seleccionar código de país en el número de WhatsApp (por defecto México +52).
+
+### 🔐 Funcionalidades premium
+
+- [ ] Crear sección premium.
+- [ ] Implementar feature premium popup en botón de WhatsApp con mensaje personalizable.
+  - [ ] Editar imagen de WhatsApp en el popup para poner la de tu negocio.
+- [ ] Añadir sección de configuración dinámica de clickId por página.
+- [ ] Mostrar tabla con clickIds generados automáticamente.
+- [ ] Mostrar notificación tipo Toast cuando se guarden los cambios.
+
+### 🔧 Otras mejoras técnicas
+
+- [ ] Soporte para clickId también en el shortcode [whatsapp_button].
 
 ---
 
