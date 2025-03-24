@@ -43,11 +43,14 @@ function whatsapp_button_display()
     $url .= '&clickid=' . urlencode($clickid);
   }
 
+  $alignment = get_option('whatsapp_button_alignment', 'right');
+  $alignment_class = $alignment === 'left' ? 'rwd-left' : 'rwd-right';
+
   // Obtener animaciones desde la configuracion
   $animation_load = get_option('whatsapp_button_animation_load', 'animate__fadeIn');
   $animation_hover = get_option('whatsapp_button_animation_hover', 'animate__pulse');
   echo '
-    <div id="whatsapp_button" class="animate__animated ' . esc_attr($animation_load) . '"
+    <div id="whatsapp_button" class="animate__animated ' . esc_attr($animation_load) . ' ' . esc_attr($alignment_class) . '"
       data-animation-load="' . esc_attr($animation_load) . '"
       data-animation-hover="' . esc_attr($animation_hover) . '">
       <a href="' . esc_url($url) . '" target="_blank" class="whatsapp_link">
@@ -56,4 +59,5 @@ function whatsapp_button_display()
     </div>
   ';
 }
+
 add_action('wp_footer', 'whatsapp_button_display');

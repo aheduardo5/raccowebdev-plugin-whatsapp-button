@@ -93,6 +93,18 @@ function whatsapp_button_animation_hover_callback()
   <?php
 }
 
+function whatsapp_button_alignment_callback()
+{
+  $alignment_value = get_option('whatsapp_button_alignment', 'right');
+  ?>
+  <select name="whatsapp_button_alignment">
+    <option value="right" <?php selected($alignment_value, 'right'); ?>>Derecha</option>
+    <option value="left" <?php selected($alignment_value, 'left'); ?>> Izquierda</option>
+  </select>
+  <p class="form-text text-muted">Selecciona la posición en la pantalla donde aparecerá el botón.</p>
+  <?php
+}
+
 function whatsapp_button_clickid_callback()
 {
   $clickid = get_option('whatsapp_button_clickid', '');

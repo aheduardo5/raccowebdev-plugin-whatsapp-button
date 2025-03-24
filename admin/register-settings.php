@@ -25,6 +25,10 @@ function whatsapp_button_register_settings()
   register_setting('whatsapp_button_settings_group', 'whatsapp_button_animation_load');
   register_setting('whatsapp_button_settings_group', 'whatsapp_button_animation_hover');
 
+  // Alineacion del boton de whatsapp
+  register_setting('whatsapp_button_settings_group', 'whatsapp_button_alignment');
+
+
   add_settings_section(
     'whatsapp_button_main_section',
     '',
@@ -52,6 +56,14 @@ function whatsapp_button_register_settings()
     'whatsapp_button_enabled',
     'Activar boton de Whatsapp',
     'whatsapp_button_enabled_callback',
+    'whatsapp_button',
+    'whatsapp_button_main_section'
+  );
+
+  add_settings_field(
+    'whatsapp_button_alignment',
+    'Alineación del botón',
+    'whatsapp_button_alignment_callback',
     'whatsapp_button',
     'whatsapp_button_main_section'
   );

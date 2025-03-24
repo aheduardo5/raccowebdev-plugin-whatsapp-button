@@ -68,8 +68,8 @@ input#submit:hover {
   font-weight: bold;
 }
 
-.form-table tbody tr:nth-child(6) td,
-.form-table tbody tr:nth-child(7) td {
+.form-table tbody tr:nth-child(7) td,
+.form-table tbody tr:nth-child(8) td {
   display: flex;
   flex-direction: row;
   justify-content: space-around;

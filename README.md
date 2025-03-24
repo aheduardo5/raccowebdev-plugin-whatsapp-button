@@ -57,10 +57,17 @@ Esta versión incluye una mejora significativa en la experiencia de usuario y pe
 ### 🎨 Personalización y UX
 
 - [x] Agregar animaciones personalizables.
-  - [x] Implementar accordion para el tema de previzualización.
-  - [x] Implementación de Bootstrap para la pantalla del Admin.
-  - [x] Contemplar que los fields de medidas también tengan la opción de previsualización.
-- [x] Mejorar layout responsive en pantallas pequeñas.
+      -- [x] Implementar accordion para el tema de previzualizacion.
+      -- [x] Implementacion de bootstrap para la pantalla del Admin.
+      -- [x] Contemplar que los fields de medidas tambien tengan la opcion de previzualizacion.
+- [x] Permitir elegir la posición del botón en pantalla.
+- [ ] Integrar más opciones de personalización para colores y diseño.
+- [ ] Compatibilidad con Google Analytics para rastrear clics.
+- [ ] Implementar soporte para múltiples botones de WhatsApp.
+- [ ] Implementar feature premium popup en boton de whatsapp con mensaje personalizable.
+      -- [ ] Editar imagen de whatsapp en el popup para poner la de tu negocio.
+- [ ] Crear seccion premium
+- [ ] Mejorar layout responsive en pantallas pequeñas.
 - [ ] Agregar más efectos de animación.
 - [ ] Aplicar una animación por defecto si el usuario no selecciona ninguna.
 - [ ] Agrupar animaciones por categoría: básicas vs. avanzadas (para futura versión premium).
