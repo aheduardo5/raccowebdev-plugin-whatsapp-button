@@ -53,7 +53,12 @@ function whatsapp_button_display()
     <div id="whatsapp_button" class="animate__animated ' . esc_attr($animation_load) . ' ' . esc_attr($alignment_class) . '"
       data-animation-load="' . esc_attr($animation_load) . '"
       data-animation-hover="' . esc_attr($animation_hover) . '">
-      <a href="' . esc_url($url) . '" target="_blank" class="whatsapp_link">
+      <a href="' . esc_url($url) . '"
+        target="_blank"
+        class="whatsapp_link"
+        data-bs-toggle="tooltip"
+        data-bs-placement="' . esc_attr($alignment) . '"
+        title="¿Necesitas ayuda? ¡Escríbenos!">
         <i class="fa-brands fa-whatsapp"></i>
       </a>
     </div>
