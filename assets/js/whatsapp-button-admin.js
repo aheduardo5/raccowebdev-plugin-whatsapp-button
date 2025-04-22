@@ -51,5 +51,41 @@ document.addEventListener("DOMContentLoaded", function () {
       "animation_preview_hover",
       "preview_hover_animation"
     );
+
+    // Actualización dinámica de tamaño de ícono y botón
+    const iconSizeInput = document.querySelector(
+      'input[name="whatsapp_icon_size"]'
+    );
+    const buttonSizeInput = document.querySelector(
+      'input[name="whatsapp_button_size"]'
+    );
+
+    const previewIcons = document.querySelectorAll(".preview_box i");
+    const previewBoxes = document.querySelectorAll(".preview_box");
+
+    if (iconSizeInput) {
+      iconSizeInput.addEventListener("input", () => {
+        let size = parseInt(iconSizeInput.value, 10);
+        if (size < 30) size = 30;
+        if (size > 100) size = 100;
+        iconSizeInput.value = size;
+        previewIcons.forEach((icon) => {
+          icon.style.fontSize = size + "px";
+        });
+      });
+    }
+
+    if (buttonSizeInput) {
+      buttonSizeInput.addEventListener("input", () => {
+        let size = parseInt(buttonSizeInput.value, 10);
+        if (size < 50) size = 50;
+        if (size > 120) size = 120;
+        buttonSizeInput.value = size;
+        previewBoxes.forEach((box) => {
+          box.style.width = size + "px";
+          box.style.height = size + "px";
+        });
+      });
+    }
   }, 1000);
 });

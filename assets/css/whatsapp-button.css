@@ -1,7 +1,7 @@
 #whatsapp_button {
   position: fixed;
-  bottom: 20px;
   right: 20px;
+  bottom: 20px;
   z-index: 1000;
   display: grid;
   place-items: center;
@@ -9,6 +9,17 @@
   height: var(--whatsapp-button-size, 80px);
   border-radius: 50%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/*CLASES PARA ACOMODAR EL BOTON DE WHATSAPP*/
+.rwd-left {
+  left: 20px;
+  right: auto;
+}
+
+.rwd-right {
+  right: 20px;
+  left: auto;
 }
 
 #whatsapp_button.animate__animated {
@@ -23,9 +34,11 @@
   color: white;
   display: grid;
   height: 80px;
+  height: var(--whatsapp-button-size, 80px);
   place-items: center;
   text-decoration: none;
   width: 80px;
+  width: var(--whatsapp-button-size, 80px);
 }
 
 #whatsapp_button .whatsapp_link i {

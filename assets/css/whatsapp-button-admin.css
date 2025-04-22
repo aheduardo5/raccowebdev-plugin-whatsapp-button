@@ -23,13 +23,6 @@ form {
   align-items: center;
 }
 
-table.form-table {
-  width: 800px;
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 4px 5px 11px -1px rgba(168, 168, 168, 0.75);
-}
-
 .form-table th {
   padding: 30px 15px;
 }
@@ -45,15 +38,15 @@ input[type="number"] {
 
 /* Botón guardar*/
 input#submit {
-  background-color: #25d366 !important;
-  color: white !important;
-  padding: 12px 25px !important;
-  border: none !important;
-  border-radius: 5px !important;
-  font-size: 16px !important;
-  cursor: pointer !important;
+  background-color: #25d366;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
   transition: background 0.3s ease-in-out;
-  box-shadow: none !important;
+  box-shadow: none;
 }
 
 input#submit:hover {
@@ -61,7 +54,8 @@ input#submit:hover {
 }
 
 .preview_box {
-  display: inline-block;
+  display: grid;
+  place-items: center;
   width: 80px;
   height: 80px;
   background-color: #25d366;
@@ -74,8 +68,8 @@ input#submit:hover {
   font-weight: bold;
 }
 
-.form-table tbody tr:nth-child(6) td,
-.form-table tbody tr:nth-child(7) td {
+.form-table tbody tr:nth-child(7) td,
+.form-table tbody tr:nth-child(8) td {
   display: flex;
   flex-direction: row;
   justify-content: space-around;

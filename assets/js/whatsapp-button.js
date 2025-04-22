@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Hacer que funcione tooltip de Bootstrap
+  const tooltipTriggerList = [].slice.call(
+    document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  );
+  tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+    new bootstrap.Tooltip(tooltipTriggerEl);
+  });
+
   const whatsappButton = document.querySelector("#whatsapp_button");
   const whatsappLink = document.querySelector(
     "#whatsapp_button .whatsapp_link"
